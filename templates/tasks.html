@@ -6,6 +6,11 @@
     </head>
 <body>
     <h1>Todo List</h1>
+    {% if error %}
+    <div style="color: red; background-color: #ffeeee; padding: 10px; border: 1px solid #ffaaaa; margin-bottom: 15px;">
+        <strong>Error:</strong> {{ error }}
+    </div>
+    {% endif %}
     <form action="/add" method="post">
         <input type="text" name="task" placeholder="New Task">
         <select name="priority">
